@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+body {
+background-color: rgb(137, 69, 205);
+}
+
+.flex-ctr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav {
+  background-color: rgb(10, 114, 114);
+}
+#searchPost {
+  font-size: x-large;
+}
+#postNumber {
+  font-size: x-large;
+}
