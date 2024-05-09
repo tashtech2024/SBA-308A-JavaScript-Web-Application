@@ -4,16 +4,23 @@ console.log('Running.....');
 const button = document.getElementById('nav');
 const products = document.getElementById('postProducts');
 const app = document.getElementById('app');
+const Http = new XMLHttpRequest();
+// const url='https://jsonplaceholder.typicode.com/posts';
+// Http.open("GET", url);
+// Http.send();
+// Http.onreadystatechange = (e) => {
+//   console.log(Http.responseText)
+// }
 // * Use the fetch API or Axios to communicate with an external web API. Use the data provided by this API to populate your application’s content and features ====//
 
-fetch('https://dummyjson.com/products/1')
+fetch('https://dummyjson.com/products/')
 .then(res => res.json())
 .then(json => console.log(json))
             
 // button.addEventListener('sumbit', logsubmit);
 async function theShop() {
     try {
-        const response = await fetch("https://dummyjson.com/products/10");
+        const response = await fetch("https://dummyjson.com/products/11");
         console.log(response);
         const jsonData = await response.json()
         console.log(jsonData);
@@ -49,7 +56,10 @@ grabComments();
 //     console.log('Button clicked!'); 
 // });
 //* Promise for user message for 50% off ==================================//
-setTimeout(function() { myFunction("SHARE LINK AND GET 50% OFF!!!"); }, 7000);
+const promise = new Promise((resolve, reject) => {
+  setTimeout(function() { myFunction(" TEXT NEWCUST TO 34344 AND GET 50% OFF!!!"); }, 7000);
+})
+console.log(promise);
 
 function myFunction(value) {
   document.getElementById("message").innerHTML = value;
